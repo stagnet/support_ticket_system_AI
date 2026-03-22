@@ -1,12 +1,13 @@
 import express from 'express';
 import cors from 'cors';
+import { env } from './config/env';
 import { errorHandler } from './middleware/errorHandler';
 import { generalLimiter } from './middleware/rateLimiter';
 import ticketRoutes from './routes/ticket.routes';
 
 const app = express();
 
-app.use(cors());
+app.use(cors({ origin: env.CORS_ORIGIN ?? '*' }));
 app.use(express.json());
 app.use('/api', generalLimiter);
 

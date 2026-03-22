@@ -10,6 +10,7 @@ const envSchema = z.object({
   NODE_ENV: z
     .enum(['development', 'production', 'test'])
     .default('development'),
+  CORS_ORIGIN: z.string().optional(),
 });
 
 export const env = envSchema.parse(process.env);
