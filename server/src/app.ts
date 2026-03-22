@@ -7,6 +7,7 @@ import ticketRoutes from './routes/ticket.routes';
 
 const app = express();
 
+app.set('trust proxy', 1);
 app.use(cors({ origin: env.CORS_ORIGIN ?? '*' }));
 app.use(express.json());
 app.use('/api', generalLimiter);
