@@ -153,4 +153,3 @@ User actions trigger top-right toast notifications:
 - WebSocket notifications for real-time ticket updates across browser tabs
 - End-to-end tests with Playwright
 - Docker Compose for one-command setup
-- Deployment to Railway or Render with CI/CD
